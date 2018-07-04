@@ -1,0 +1,23 @@
+section.sec1{
+    width:100%;
+    height: 110vh;
+    background-size: cover;
+    background-position: cover;
+   /* background: url('C:\Users\saif\Desktop\websiteangular\src\assets\img\natural.jpg.jpg') no-repeat;*/
+   /* background: url('');*/
+   padding: 0 0 0px;
+}
+
+.content{
+    margin-top: 80px;
+
+}
+
+.content p{
+    width: 900px;
+    margin: 30px auto;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+
+}

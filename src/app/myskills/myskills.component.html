@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>my skills table</title>
+  </head>
+
+  <body>
+    <div class="reglage">
+
+    <table align="center">
+      <tr>
+        <td id="header" colspan="7"><h1> my skills data Angular + Firebase </h1></td>
+      </tr>
+      <tr>
+        <th>$key</th>
+        <th>name</th>
+        <th>phone</th>
+        <th>region</th>
+        <th>skill</th>
+        <th>price</th>
+        <th>Actions</th>
+      </tr>
+
+      <tr *ngFor="let item of itemArray" >
+        <td>{{item.$key}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.region}}</td>
+        <td>{{item.skill}}</td>
+        <td>{{item.price}}</td>
+        <td><button (click)="openModal()" (click)="editForm(item.$key)" class="bdeseignEdt">Edit</button></td>
+        <div id="myModal" class="modal">
+       
+          <div class="modal-content" >
+  
+            <div class="model-cont">
+              <h1>Add Skill Form</h1>
+  
+            <hr>
+            <label for="name"><b>Name</b></label>
+            <input type="text" name="name" #name="ngModel"  [(ngModel)]="data.name" placeholder="insert your name">
+  
+            <label for="phone"><b>phone</b></label>
+            <input type="text" name="phone" [(ngModel)]="data.phone" placeholder="insert your phone">
+  
+            <label for="region"><b>region</b></label>
+            <input type="text" name="region" [(ngModel)]="data.region" placeholder="insert your region">
+  
+            <label for="skill"><b>skill</b></label>
+            <input type="text" name="skill" [(ngModel)]="data.skill" placeholder="insert your skill">
+  
+            <label for="price"><b>price</b></label>
+            <input type="text" name="price" [(ngModel)]="data.price" placeholder="insert your price">
+  
+  
+            <button class="submitBtn" id="Submit" (click)="OnEdit(item.$key)">Save</button>
+            <button class="closeBtn" id="Close" (click)="closeModal()">Close</button>
+            </div>
+          </div>
+  
+      </div>
+        <td><button (click)="OnDelete(item.$key)" class="bdeseignDel">Delete</button></td>
+      </tr>
+    </table>
+   </div>
+
+  <button id="modalBtn" class="button" (click)="openModal()">Open</button>
+    <div id="myModal" class="modal">
+       
+        <div class="modal-content" >
+
+          <div class="model-cont">
+            <h1>Add Skill Form</h1>
+
+          <hr>
+          <label for = "name"><b>Name</b></label>
+          <input type="text" name="name" #name="ngModel" [(ngModel)]="data.name"  placeholder="insert your name">
+
+          <label for="phone"><b>phone</b></label>
+          <input type="text" name="phone"  placeholder="insert your phone">
+
+          <label for="region"><b>region</b></label>
+          <input type="text" name="region"  placeholder="insert your region">
+
+          <label for="skill"><b>skill</b></label>
+          <input type="text" name="skill"  placeholder="insert your skill">
+
+          <label for="price"><b>price</b></label>
+          <input type="text" name="price"  placeholder="insert your price">
+
+
+          <button class="submitBtn" id="Submit" (click)="Submitfnct(item.key,item.name,item.phone,item.region,item.skill,item.price)">Submit</button>
+          <button class="closeBtn" id="Close" (click)="closeModal()">Close</button>
+          </div>
+        </div>
+
+    </div>
+
+
+  </body>
+</html>

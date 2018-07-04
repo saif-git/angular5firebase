@@ -1,0 +1,30 @@
+<html>
+  <head>
+  <title>my addskills form</title>
+</head>
+
+
+<body>
+<div class="login-page">
+    <div class="form">
+    
+           <form class="register-form">
+                <input type="text" name="name" #name="ngModel" [(ngModel)]='data.name'   placeholder="insert your name" required minlength="3" maxlength="20" >
+                <input type="text" placeholder="insert your mobile phone" name="phone" #phone="ngModel" [(ngModel)]='data.phone'>
+                <input type="text" placeholder="insert your  region" name="region" #region="ngModel" [(ngModel)]='data.region'>
+                <input type="text" placeholder="insert your skills" name="skill" #skill="ngModel" [(ngModel)]='data.skill'>
+               <input type="text" placeholder="insert price" name="price" #price="ngModel" [(ngModel)]='data.price'>
+                            <button (click)="insertskill()">Submit</button>
+              </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js">
+</script>
+<script > 
+$('.button').click(function(){
+  $(form).animate({heigth:"toggle", opacity:"toggle"},"slow" );
+});
+</script>
+</body>
+</html>
