@@ -56,21 +56,25 @@ OnEdit($key){
    this.itemList.set($key, {
     name:  this.data.name,
     phone:  this.data.phone,
-    region: this.data.price,
     skill:  this.data.region,
-    price: this.data.skill
-
+    price: this.data.skill,
+    region: this.data.price
    })
 
-   this.router.navigate(['/myskills'])
-  console.log("the data: "+this.data.name+" "+this.data.region+" "+this.data.skill+"\n")
+ // this.router.navigate(['/myskills'])
+this.itemArray=[]
+
+console.log("name :"+this.data.name+" "+"phone  :"+this.data.phone+" "+"region  :"+this.data.region+" "+"skill  :"+this.data.skill+" "+"price  :"+this.data.price)
  
 }
 
 OnDelete($key){
-console.log("Deleting :")
-}
+  console.log("Deleting : data")
+  
+  this.itemList.remove($key)
 
+  this.itemArray=[]
+  }
 
 Submitfnct($key,name,phone,region,skill,price){
 
@@ -96,10 +100,13 @@ editForm($key){
     if(value['$key']==$key){
  
       this.data.name=value['name']
+      console.log(value['name'])
       this.data.phone=value['phone']
       this.data.region=value['region']
       this.data.skill=value['skill']
       this.data.price=value['price']
+
+      console.log("name :"+this.data.name+" "+"phone  :"+this.data.phone+" "+"region  :"+this.data.region+" "+"skill  :"+this.data.skill+" "+"price  :"+this.data.price+" ")
 
     }
      

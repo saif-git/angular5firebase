@@ -9,9 +9,9 @@
   <div class="form">
     
 <form class="register-form">
-      <input type="text" placeholder="insert your username" ><!--name="username" [(ngModel)]="username"-->
-      <input type="text" placeholder="insert your password" ><!--name="password" [(ngModel)]="password"-->
-<button>confirmation</button>
+      <input type="text" placeholder="insert your username" name="email" [(ngModel)]="email"><!--name="username" [(ngModel)]="username"-->
+      <input type="password" placeholder="insert your password" name="password" [(ngModel)]="password"><!--name="password" [(ngModel)]="password"-->
+<button (click)="onLogin()">confirmation</button>
 </form>
   </div>
 </div>

@@ -6,44 +6,37 @@
 
 
 <body>
-  <!--img src="C:\Users\saif\Desktop\websiteangular\src\assets\img\DspuM-PIC-MCH061122.jpg"-->
-<div class="container">
+<div class="box">
     
-       <h1>Regitration here</h1>
+       <h2>Registration</h2>
       <form>
-             <div>
-                <input type="text" ng-Model name="fname"  placeholder="" required minlength="3" maxlength="20" >
-               <label>
-                insert your first name
-              </label>
-             </div>
-             <div>
-                <input type="text" placeholder="" name="lname" ng-Model>
-               <label>
-                insert last name
-               </label>
-             </div>
-             <div>
-                <input type="text" placeholder="" name="email" ng-Model>
-               <label>
-                insert your email
-               </label>
-             </div>
-             <div>
-                <input type="text" placeholder="" name="passwd" ng-Model>
-               <label>
-                   password
-               </label>
-             </div>
+        <div class="inputbox">
+          <input type="text" name="fname" [(ngModel)]="fname"required>
+          <label>fname</label>
+        </div>
 
-             <div>
-                <input type="text" placeholder="" name="rpasswd" ng-Model>
-               <label>
-                   Re-enter-password
-               </label>
-             </div>
-                            <!--<button>registration</button>-->
-                            <input type="submit" value="register" name="signup">
+        <div class="inputbox">
+            <input type="text" name="lname" [(ngModel)]="lname" required>
+            <label>lname</label>
+          </div>
+
+          <div class="inputbox">
+              <input type="text" name="email" [(ngModel)]="email" required>
+              <label>email</label>
+            </div>
+
+            <div class="inputbox">
+                <input type="password" name="passwd" [(ngModel)]="passwd" required>
+                <label>passwd</label>
+              </div>
+
+              <div class="inputbox">
+                  <input type="password" name="rpasswd" [(ngModel)]="rpasswd" required>
+                  <label>rpasswd</label>
+                </div>
+             <input type="submit" value="signup" (click)="onRegister()">
+
+             
       </form>      
 </div>
 

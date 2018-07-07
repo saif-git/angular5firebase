@@ -18,6 +18,15 @@ body{
     font-size: 16px;
     border: none;
 }
+
+.dropbtn2{
+    background-color: #E2472F;
+    color: white;
+    margin: 10px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
 .dropdown-content a {
     display: none;
     position: absolute;

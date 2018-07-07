@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
 import { MyskillsComponent } from './myskills/myskills.component';
 import { AllskillsComponent } from './allskills/allskills.component';
 import { MydirectiveDirective } from './mydirective.directive';
+import { MyprofileComponent } from './myprofile/myprofile.component';
 
 
 
@@ -45,7 +46,8 @@ const routes:Routes=[
     RegisterComponent,
     AllskillsComponent,
     MydirectiveDirective,
-    MyskillsComponent
+    MyskillsComponent,
+    MyprofileComponent
   
     
   

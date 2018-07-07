@@ -18,16 +18,14 @@
           <li><a routerLink='/myskills'>My Skills</a></li>
           <li><a routerLink='/addskill'>addskill</a></li>
           <li><a routerLink='/allskills'>All kills</a></li>
-          <li><a class="active" routerLink='/login'>log in</a></li>
-          <li><a class="desactive" routerLink='/register'>sign up</a></li>
+          <li *ngIf="!isLoggedIn"><a class="active" routerLink='/login'>log in</a></li>
+          <li *ngIf="!isLoggedIn" ><a class="desactive" routerLink='/register' >sign up</a></li>
 
         </ul>
-        <!--<div class="dropdown">-->
-          <button class="dropbtn">your profile</button>
-            <div class="drop-content">
-                   <a href="reload">my profile</a> 
-                   <a href="logout">Logout</a>
-            </div>
+
+        <li *ngIf="isLoggedIn"><button class="dropbtn" routerLink='/myprofile'>my profile</button>
+          <button class="dropbtn2" routerLink=# (click)="logout()">Log out</button></li>
+          
         <!--/div-->
    </nav>
   </div>

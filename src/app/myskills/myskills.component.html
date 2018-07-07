@@ -41,16 +41,16 @@
             <input type="text" name="name" #name="ngModel"  [(ngModel)]="data.name" placeholder="insert your name">
   
             <label for="phone"><b>phone</b></label>
-            <input type="text" name="phone" [(ngModel)]="data.phone" placeholder="insert your phone">
+            <input type="text" name="phone" #phone="ngModel" [(ngModel)]="data.phone" placeholder="insert your phone">
   
             <label for="region"><b>region</b></label>
-            <input type="text" name="region" [(ngModel)]="data.region" placeholder="insert your region">
+            <input type="text" name="region" #region="ngModel" [(ngModel)]="data.region" placeholder="insert your region">
   
             <label for="skill"><b>skill</b></label>
-            <input type="text" name="skill" [(ngModel)]="data.skill" placeholder="insert your skill">
+            <input type="text" name="skill" #skill="ngModel" [(ngModel)]="data.skill" placeholder="insert your skill">
   
             <label for="price"><b>price</b></label>
-            <input type="text" name="price" [(ngModel)]="data.price" placeholder="insert your price">
+            <input type="text" name="price" #price="ngModel" [(ngModel)]="data.price" placeholder="insert your price">
   
   
             <button class="submitBtn" id="Submit" (click)="OnEdit(item.$key)">Save</button>
