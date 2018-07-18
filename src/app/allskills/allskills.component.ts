@@ -23,9 +23,19 @@ export class AllskillsComponent implements OnInit {
     skill:  '',
     price: ''
          }
-
+myUid:any
   constructor(public db:AngularFireDatabase,public router:Router) {
+    this.itemList=this.db.list('skill')
 
+    this.itemList.snapshotChanges().subscribe(actions=>{
+   actions.forEach(action=>{
+    let w= action.payload.toJSON()
+    w['$key']=action.key
+    this.itemArray.push(w as ListItemClass)
+   })
+    })
+    this.myUid=localStorage.getItem('uid')
+    console.log(this.itemArray)
    }
 
   ngOnInit() {
@@ -87,5 +97,19 @@ export class AllskillsComponent implements OnInit {
     }
 
 
+  moreInfo($key){
+    console.log("we are in details")
+    console.log("this is the key :"+$key)
+this.router.navigate(['/details/'+$key])
+  }
 
+}
+
+export class ListItemClass{
+  $key:string;
+  name:  string;
+phone:  string;
+region: string;
+skill:  string;
+price:  string;
 }

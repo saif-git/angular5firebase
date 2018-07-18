@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>user profile page</title>
+  </head>
+
+  <body>
+    <div class="hero-image">
+      <img  src="{{data.image}}">
+
+      
+       <input type="file" (change)="upload($event)"  accept=".png,.jpg" color="green" >
+       </div>
+         
+        
+
+    <div class="contenu">
+     
+    <h1>Email :{{email}}</h1>
+    <p>name :{{data.name}}</p>
+    <p>region :{{data.region}}</p>
+    <p>skill :{{data.skill}}</p>
+    <p>phone :{{data.phone}}</p>
+    <p>price:{{data.price}}</p> 
+    <p>email :{{data.email}}</p>
+
+    <time datetime="12-07-2018T 15:25" class="date">12 july 2018</time>
+    
+    <button id="modalBtn" class="button" (click)="openModal()">Open</button>
+    <div id="myModal" class="modal">
+       
+        <div class="modal-content" >
+
+          <div class="model-cont">
+            <h1>Add Skill Form</h1>
+
+          <hr>
+          <label for = "name"><b>Name</b></label>
+          <input type="text" name="name" #name="ngModel" [(ngModel)]="data.name"  placeholder="insert your name">
+
+          <label for="phone"><b>phone</b></label>
+          <input type="text" name="phone"  placeholder="insert your phone"  [(ngModel)]="data.phone">
+
+          <label for="region"><b>region</b></label>
+          <input type="text" name="region"  placeholder="insert your region"  [(ngModel)]="data.region">
+
+          <label for="skill"><b>skill</b></label>
+          <input type="text" name="skill"  placeholder="insert your skill"  [(ngModel)]="data.skill">
+
+          <label for="price"><b>price</b></label>
+          <input type="text" name="price"  placeholder="insert your price"  [(ngModel)]="data.price">
+
+          <label for="email"><b>email</b></label>
+          <input type="text" name="email"  placeholder="insert your email"  [(ngModel)]="data.email">
+
+          <button class="submitBtn" id="Submit" (click)="OnEdit()" >Submit</button>
+          <button class="closeBtn" id="Close" (click)="closeModal()">Close</button>
+          </div>
+        </div>
+
+    </div>
+  </div>
+ 
+  </body>
+</html>

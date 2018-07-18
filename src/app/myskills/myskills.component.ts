@@ -25,6 +25,8 @@ export class MyskillsComponent implements OnInit {
     price: ''
          }
 
+  myUid:any
+
   constructor(public db:AngularFireDatabase,public router:Router) {
     this.itemList=this.db.list('skill')
 
@@ -35,6 +37,7 @@ export class MyskillsComponent implements OnInit {
     this.itemArray.push(w as ListItemClass)
    })
     })
+    this.myUid=localStorage.getItem('uid')
     console.log(this.itemArray)
 
    }
@@ -56,9 +59,9 @@ OnEdit($key){
    this.itemList.set($key, {
     name:  this.data.name,
     phone:  this.data.phone,
-    skill:  this.data.region,
-    price: this.data.skill,
-    region: this.data.price
+    region:  this.data.region,
+    skill: this.data.skill,
+    price: this.data.price,
    })
 
  // this.router.navigate(['/myskills'])
@@ -123,4 +126,5 @@ phone:  string;
 region: string;
 skill:  string;
 price:  string;
+
 }

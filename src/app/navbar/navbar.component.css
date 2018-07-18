@@ -18,7 +18,14 @@ body{
     font-size: 16px;
     border: none;
 }
-
+.dropbtn1{
+    background-color: rgb(14, 128, 194);
+    color: white;
+    margin: 10px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
 .dropbtn2{
     background-color: #E2472F;
     color: white;
@@ -26,6 +33,7 @@ body{
     padding: 16px;
     font-size: 16px;
     border: none;
+    width:100px;
 }
 .dropdown-content a {
     display: none;

@@ -40,7 +40,7 @@ console.log('uid :'+localStorage.getItem('uid'))
 
 
      console.log("status log:"+localStorage.getItem('isLoggedIn'))
-      this.router.navigate(['/addskill'])
+      this.router.navigate(['/myskills'])
     }).catch(error=>{
       console.log(error)
     })

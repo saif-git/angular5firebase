@@ -10,7 +10,7 @@ export const environment = {
     authDomain: "angular5firecrud.firebaseapp.com",
     databaseURL: "https://angular5firecrud.firebaseio.com",
     projectId: "angular5firecrud",
-    storageBucket: "",
+    storageBucket: "angular5firecrud.appspot.com",
     messagingSenderId: "989405994909"
   }
 

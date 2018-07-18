@@ -1,0 +1,24 @@
+<body>
+    <div class="reglage">
+
+    <table align="center">
+      <tr>
+        <td id="header" colspan="7"><h1> my skills data Angular + Firebase </h1></td>
+      </tr>
+      <tr>
+        <th>name</th>
+        <th>phone</th>
+        <th>region</th>
+        <th>skill</th>
+      </tr>
+      <tr *ngFor="let item of itemArray" >
+        <td>{{item.name}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.region}}</td>
+        <td>{{item.skill}}</td>
+        <th><button class="buttom" (click)="moreInfo(item.$key)" >details</button></th>
+
+      </tr>
+      </table>
+</div>
+</body>

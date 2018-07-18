@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {RouterModule ,Routes } from '@angular/router';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -23,6 +24,8 @@ import { MyskillsComponent } from './myskills/myskills.component';
 import { AllskillsComponent } from './allskills/allskills.component';
 import { MydirectiveDirective } from './mydirective.directive';
 import { MyprofileComponent } from './myprofile/myprofile.component';
+import { DetailsComponent } from './details/details.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
@@ -33,7 +36,10 @@ const routes:Routes=[
   {path: 'login',component:LoginComponent},
   {path: 'register',component:RegisterComponent},
   {path: 'myskills',component:MyskillsComponent},
-  {path: 'allskills',component:AllskillsComponent}
+  {path: 'allskills',component:AllskillsComponent},
+  {path:'myprofile',component:MyprofileComponent},
+  {path:'details/:id',component:DetailsComponent},
+  {path:'userprofile',component:UserprofileComponent}
   
 ]
 @NgModule({
@@ -47,7 +53,9 @@ const routes:Routes=[
     AllskillsComponent,
     MydirectiveDirective,
     MyskillsComponent,
-    MyprofileComponent
+    MyprofileComponent,
+    DetailsComponent,
+    UserprofileComponent
   
     
   
@@ -60,7 +68,9 @@ const routes:Routes=[
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
